@@ -1,0 +1,39 @@
+.burgerButton{
+    display: none;
+    border : 0;
+    background: none;
+    width: 30px ;
+    height: 30px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+.burgerButton img{
+    width: 30px;
+    height: 30px;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+}
+
+.navlink{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-family: AvertaStd-Regular;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width : 800px) {
+    .burgerButton{
+        display: block;
+    }
+}

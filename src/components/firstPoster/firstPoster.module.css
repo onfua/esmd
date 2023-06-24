@@ -1,0 +1,142 @@
+@font-face {
+    font-family: AvertaStd-Bold;
+    src: url("../../assets/fonts/AvertaStd-Bold/@font-face/447315c0c330fd423c8e1cc18024669d.woff");
+}
+
+@font-face {
+    font-family: AvertaStd-Semibold;
+    src: url("../../assets/fonts/AvertaStd-Semibold/@font-face/aef2da2daa6e15be44ff1a2706cc61a1.woff");
+}
+
+@font-face {
+    font-family: AvertaStd-Regular;
+    src: url("../../assets/fonts/AvertaStd-Regular/@font-face/19b8f54eb1f074fb01efb1c4f02e9623.woff");
+}
+
+.main{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1440 / 924;
+    background: #F9F3EC;
+    display: flex;
+    margin :0;
+    overflow: hidden;
+}
+
+.left{
+    width: 50%;
+    padding : 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap : 30px;
+}
+
+.left h1{
+    font-size : 54px;
+    max-width: 429px;
+    margin : 0;
+    line-height: 71.5px;
+    font-family: AvertaStd-Bold;
+}
+
+.left h3{
+    font-size: 24px;
+    line-height: 35.5px;
+    text-transform: capitalize;
+    font-family: AvertaStd-Semibold;
+    margin : 0;
+}
+
+.left p{
+    margin : 0;
+    font-size: 18px;
+    line-height: 35.5px;
+    font-family: AvertaStd-Regular;
+}
+
+.left button{
+    max-width: 326px;
+    height: 64px;
+    border-radius: 35px;
+    background: #819D44;
+    border : 0;
+    color : #fff;
+    line-height: 35.5px;
+    font-size: 16px;
+    font-family: AvertaStd-Semibold;
+}
+
+.right{
+    position: relative;
+    width: 50%;
+}
+
+.right img{
+    position: relative;
+    top : 50%;
+    transform: translateY(-50%);
+    object-fit: contain;
+    width: 100%;
+    aspect-ratio: 924 / 720;
+}
+
+.right img:nth-child(2){
+    position: absolute;
+    right: 0;
+    width: calc(100% + 50px);
+    aspect-ratio: 924 / 770;
+}
+
+@media screen and (max-width:840px) {
+    .left{
+        padding:20px;
+        gap : 20px;
+    }
+
+    .left h1 {
+        font-size : 25px;
+        line-height: 30px;
+    }
+
+    .left h3{
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    .left p{
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    .left button{
+        font-size:12px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .left{
+        gap : 10px;
+    }
+
+    .left h1 {
+        font-size : 23px;
+        line-height: 30px;
+    }
+
+    .left h3{
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .left p{
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .left button{
+        font-size:10px;
+        height: 40px;
+    }
+}
