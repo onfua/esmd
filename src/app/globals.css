@@ -1,3 +1,18 @@
+@font-face {
+    font-family: AvertaStd-Bold;
+    src: url("../assets/fonts/AvertaStd-Bold/@font-face/447315c0c330fd423c8e1cc18024669d.woff");
+}
+
+@font-face {
+    font-family: AvertaStd-LightItalic;
+    src: url("../assets/fonts/AvertaStd-LightItalic/@font-face/e210ea9cc1b28016abf9ce7c3d2a7eeb.woff");
+}
+
+@font-face {
+    font-family: AvertaStd-Regular;
+    src: url("../assets/fonts/AvertaStd-Regular/@font-face/19b8f54eb1f074fb01efb1c4f02e9623.woff");
+}
+
 body{
     margin : 0;
     padding: 0;

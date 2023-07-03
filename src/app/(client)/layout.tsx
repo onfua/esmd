@@ -10,7 +10,7 @@ const LeftLink : React.FC = () => {
         <>
             <Link href="/" className={layoutStyle.navlink}>Accueil</Link>
             <Link href="/about" className={layoutStyle.navlink}>A propos</Link>
-            <Link href="/product" className={layoutStyle.navlink}>Nos produits</Link>
+            <Link href="/products" className={layoutStyle.navlink}>Nos produits</Link>
         </>
     )
 } 

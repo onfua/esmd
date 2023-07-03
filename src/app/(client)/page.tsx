@@ -1,11 +1,12 @@
 import React from 'react'
 import FirstPoster from '@/components/firstPoster/firstPoster'
+import ProductPost from '@/components/product-post/productPost'
 
 const Home : React.FC = () => {
   return (
     <>
       <FirstPoster/>
-      <h1>Nos produits</h1>
+      <ProductPost></ProductPost>
     </>
   )
 }
