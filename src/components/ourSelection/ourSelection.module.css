@@ -1,0 +1,48 @@
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F8F8F8;
+    padding-top : 70px;
+    padding-bottom: 70px;
+}
+
+.main > h1 {
+    color: #211F1E;
+    font-size: 40px;
+    font-family: AvertaStd-Bold;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60px;
+}
+
+.link{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 16px;
+    font-family: AvertaStd-Semibold;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35.5px;
+    background-color: #819D44;
+    width: 309px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 35px;
+    
+}
+
+@media screen and (max-width:840px) {
+    .main > h1 {
+        font-size:22px;
+        line-height: 40px;
+    }
+    .link{
+        font-size: 11px;
+        width: 150px;
+        height:40px;
+    }
+}
