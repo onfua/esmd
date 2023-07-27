@@ -27,7 +27,7 @@ export default function Product(props : propsProduct){
     useEffect(() => {
         const getProduct = async () => {
             //static file
-            const data : products = [{image,name:'Baies roses',id:1},{image,name:'Baies roses',id:1},{image,name:'Baies roses',id:1},{image,name:'Baies roses',id:1}]
+            const data : products = [{image,name:'Baies roses',id:1},{image,name:'Baies roses',id:2},{image,name:'Baies roses',id:3},{image,name:'Baies roses',id:4}]
             setProducts(data)
         }
         getProduct()

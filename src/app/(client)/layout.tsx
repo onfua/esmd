@@ -42,6 +42,35 @@ const DefaultLayout = ({children} : {children : React.ReactNode}) => {
             <main className={layoutStyle.main}>
                 {children}
             </main>
+            <footer className={layoutStyle.footer}>
+                <div className={layoutStyle.footerHead}>
+                    <div className={layoutStyle.esmdExport}>
+                        <h1>ESMD</h1>
+                        <h1>Export</h1>
+                    </div>
+                    <div className={layoutStyle.footerNav}>
+                        <h1>explorer</h1>
+                        <Link href={'/'} className={layoutStyle.footerLink}>Accueil</Link>
+                        <Link href={'/about'} className={layoutStyle.footerLink}>Qui sommes-nous</Link>
+                        <Link href={'/history'} className={layoutStyle.footerLink}>Notre histoire</Link>
+                        <Link href={'/blog'} className={layoutStyle.footerLink}>Blog</Link>
+                        <Link href={'/faq'} className={layoutStyle.footerLink}>Foire aux questions</Link>
+                    </div>
+                    <div className={layoutStyle.footerNav}>
+                        <h1>shop</h1>
+                        <Link href={'/products/spices'} className={layoutStyle.footerLink}>Epices</Link>
+                        <Link href={'/products/oil'} className={layoutStyle.footerLink}>Huiles essentielles</Link>
+                        <Link href={'/products/floralwaters'} className={layoutStyle.footerLink}>Eaux florales</Link>
+                    </div>
+                    <div className={layoutStyle.footerNav}>
+                        <h1>contact</h1>
+                        <p>+261 33 09 631 68</p>
+                        <p>esmd.exportmg@gmail.com</p>
+                    </div>
+                </div>
+                <hr />
+                <p>© ESMD Export - Tous droits réservés • Mentions légales • Cookies</p>
+            </footer>
         </>
     )
 }

@@ -1,17 +1,18 @@
 'use client'
 
 import { StaticImageData } from 'next/image'
-import style from './product.module.css'
+import style from './recent.module.css'
 
-import picture from '@/assets/images/product-suggested/ravitsara-removebg-preview-4.png'
+import picture from '@/assets/images/recentArticle/rectangle-1287.png'
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
+import Link from 'next/link'
+
 type productType = {
     image : string | StaticImageData,
     name : string,
-    price : number,
     id : number | string
 }
 
@@ -21,21 +22,21 @@ export default function Products(){
     useEffect(() => {
         const getProducts = async () => {
             //static file
-            const data : productType[] = [{image:picture,name:'Huile essentielles de Ravintsara 30ml',price:15,id:1},{image:picture,name:'Huile essentielles de Ravintsara 30ml',price:15,id:2},{image:picture,name:'Huile essentielles de Ravintsara 30ml',price:15,id:3}]
+            const data : productType[] = [{image:picture,name:'Comment bien conserver les épices longtemps?',id:1},{image:picture,name:'Comment bien conserver les épices longtemps?',id:2},{image:picture,name:'Comment bien conserver les épices longtemps?',id:3}]
             setProducts(data)
         }
         getProducts()
     },[])
 
     const displayProducts = () => {
-        return products.map(({image,name,price,id} : productType) => {
+        return products.map(({image,name,id} : productType) => {
             return (
                 <div className={style.product} key={id}>
                     <div className={style.image}>
                         <Image src={image} alt={name}></Image>
                     </div>
                     <h3>{name}</h3>
-                    <h4>{price}€</h4>
+                    <Link href={'/blog/'+id} className={style.link}>lire l'article</Link>
                 </div>
             )
         })

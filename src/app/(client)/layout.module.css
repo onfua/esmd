@@ -33,7 +33,6 @@
     height: 30px;
     margin: 0;
     width: 100%;
-    text-align: center;
     color: #4E0515;
     font-size: 31px;
     font-family: AvertaStd-Bold;
@@ -49,6 +48,70 @@
 .main{
     max-width: 1440px;
     margin:auto;
+    padding: 0;
+}
+
+.footer{
+    max-width: 1440px;
+    margin:auto;
+    margin-top : 70px;
+    margin-bottom: 50px;
+}
+
+.footer > p{
+    margin-top:50px;
+    color: #646464;
+    text-align: center;
+    font-family: AvertaStd-Regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.6px;
+}
+
+.footer hr{
+    width: 85%;
+    height: 1px;
+    background: #E7E7E7;
+    border: 0;
+}
+
+.footerHead{
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.footerNav{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.footerNav h1{
+    color: #211F1E;
+    font-family: AvertaStd-Bold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+.footerLink{
+    text-decoration: none;
+    color: #211F1E;
+    font-family: AvertaStd-Regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.footerNav p{
+    margin: 0;
     padding: 0;
 }
 

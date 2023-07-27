@@ -13,6 +13,11 @@
     src: url("../assets/fonts/AvertaStd-Regular/@font-face/19b8f54eb1f074fb01efb1c4f02e9623.woff");
 }
 
+@font-face {
+    font-family: AvertaStd-Semibold;
+    src: url("../assets/fonts/AvertaStd-Semibold/@font-face/aef2da2daa6e15be44ff1a2706cc61a1.woff");
+}
+
 body{
     margin : 0;
     padding: 0;

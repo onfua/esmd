@@ -1,18 +1,3 @@
-@font-face {
-    font-family: AvertaStd-Bold;
-    src: url("../../assets/fonts/AvertaStd-Bold/@font-face/447315c0c330fd423c8e1cc18024669d.woff");
-}
-
-@font-face {
-    font-family: AvertaStd-Semibold;
-    src: url("../../assets/fonts/AvertaStd-Semibold/@font-face/aef2da2daa6e15be44ff1a2706cc61a1.woff");
-}
-
-@font-face {
-    font-family: AvertaStd-Regular;
-    src: url("../../assets/fonts/AvertaStd-Regular/@font-face/19b8f54eb1f074fb01efb1c4f02e9623.woff");
-}
-
 .main{
     position: relative;
     width: 100%;
