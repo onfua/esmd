@@ -36,7 +36,7 @@ export default function Products(){
                         <Image src={image} alt={name}></Image>
                     </div>
                     <h3>{name}</h3>
-                    <Link href={'/blog/'+id} className={style.link}>lire l'article</Link>
+                    <Link href={`/blog/${id}`} className={style.link}>lire l'article</Link>
                 </div>
             )
         })
