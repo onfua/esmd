@@ -13,9 +13,6 @@
 .right{
     width:50%;
     padding : 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 .left img{
     object-fit: contain;
