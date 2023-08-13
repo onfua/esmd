@@ -2,14 +2,15 @@
 
 import { useState } from 'react'
 import styles from './contactez.module.css'
+import Image from 'next/image'
 
 const Contactez =()=>{
     const [countryCode , setCountryCode] = useState<any>('+33')
     const [phoneNumber , setPhoneNumber] = useState<any>(countryCode)
-    const [drap, setDrap] = useState<any>(<img src="/images/drap.png" alt="drap" className={styles.drap}/>)
+    const [drap, setDrap] = useState<any>(<Image src="/images/drap.png" alt="drap" className={styles.drap}/>)
 
     const drapeau = [
-        <img src="/images/drap.png" alt="france" className={styles.drap} />
+        <Image src="/images/drap.png" alt="france" className={styles.drap} />
     ]
 
     const handelCountryCodeChange =(e : any)=>{
@@ -33,14 +34,14 @@ const Contactez =()=>{
     return(
         <>
         <div className={`${styles.bgMain} position-relative`}>
-            <img className={styles.frame} src="/images/Frame.png" alt="frame" />
+            <Image className={styles.frame} src="/images/Frame.png" alt="frame" />
            <div className={styles.myContainer}>
                 <h1 className={styles.h1Title}>Contactez-nous</h1>
                 <p className={styles.myPara}>Nous serions ravis de vous entendre! Que vous ayez des questions sur nos produits, besoins de conseils pour choisir la bonne épices ou huiles essentielles, notre équipe est là pour vous</p>
                 <ul className={styles.myList}>
-                    <li><img src="/images/sms.svg" alt='email'/> contact@esmdexport.com</li>
-                    <li><img src="/images/call.svg" alt='call'/> +261 33 12 567 89</li>
-                    <li><img src="/images/location.svg" alt='location'/> 5 rue Pleyel, Antananarivo, Madagascar</li>
+                    <li><Image src="/images/sms.svg" alt='email'/> contact@esmdexport.com</li>
+                    <li><Image src="/images/call.svg" alt='call'/> +261 33 12 567 89</li>
+                    <li><Image src="/images/location.svg" alt='location'/> 5 rue Pleyel, Antananarivo, Madagascar</li>
                 </ul>
            </div>
             <div className={`${styles.formulaire}`}>
@@ -81,7 +82,7 @@ const Contactez =()=>{
                 </form>
             </div>
         </div>
-        <img src="/images/Rectangle 1280.png" className={`${styles.imageFooter} w-100`} alt=""  />
+        <Image src="/images/Rectangle 1280.png" className={`${styles.imageFooter} w-100`} alt=""  />
       </>
     )
 }
