@@ -1,0 +1,141 @@
+
+.header{
+    height: 180px;
+    padding: 0;
+}
+.fond{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-repeat: no-repeat;
+}
+.section{
+    height: 320px;
+    width: 36%;
+    margin: auto;
+    text-align: center;
+    padding-top: 70px;
+}
+.descri{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.image{
+    width: 450px !important;
+    height: 100%;
+}
+.text{
+    width: 47% !important;
+}
+.article{
+    margin-bottom: 150px;
+    flex-wrap: wrap;
+}
+.article:nth-child(even){
+    position: relative;
+    left: 80px;
+}
+.ligne{
+    width: 2px;
+    background-color: rgb(211, 211, 211);
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 20%;
+    z-index: -1;
+}
+.container{
+    width: 90% !important;
+    margin: auto;
+}
+.myList{
+    list-style: none;
+    padding: 0;
+}
+.myList li{
+    margin-top: 15px;
+}
+.bgHead{
+    background-color: #F9F3EC;
+}
+
+.contactContent{
+    padding:0 70px 130px 150px;
+}
+.myTitle{
+    font-size: 54px;
+    font-weight: bolder;
+}
+.sousTitre{
+    font-size: 32px;
+}
+.myPara{
+    font-size: 18px;
+    margin: 25px 0;
+}
+@media (max-width: 1200px) {
+    .section{
+        width: 50%;
+    }
+}
+@media (max-width: 992px) {
+    .image{
+        width: 350px !important;
+    }
+    .article{
+        margin-bottom: 70px;
+    }
+    .text{
+        width: 48% !important;
+    }
+    .text h2{
+        font-size: 45px;
+    }
+    .text h3{
+        font-size: 30px;
+    }
+    .article:nth-child(even){
+        left: 50px;
+    }
+    .ligne{
+        height: 80%;
+    }
+}
+@media (max-width: 815px) {
+    .container{
+        width: 80%;
+        padding: 10%;
+    }
+    .image{
+        width: 90% !important;
+        margin: auto;
+    }
+    .article:nth-child(even){
+        left: 0px;
+    }
+    .text{
+        margin-top: 30px !important;
+        width: 80% !important;
+        position: relative;
+        left: 3%;
+    }
+    .ligne{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .fond{
+        background-image: none !important;
+    }
+    .header{
+        height: 120px;
+    }
+    .header h2{
+        font-size: 45px;
+    }
+    .section{
+        width: 80%;
+    }
+}

@@ -1,0 +1,130 @@
+.h1Title{
+    font-size: 35px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 50px;
+}
+.bgMain{
+    background-color: #f9f3ec;
+    height: 107vh;
+}
+.myList{
+    list-style-type: none;
+    padding: 0;
+}
+.myList li{
+    margin-bottom: 15px;
+}
+.myContainer{
+    padding-left: 130px;
+    position: relative;
+    top:-20px;
+    left: 20px;
+    width: 44%;
+    padding:0 70px 130px 150px;
+}
+.myPara{
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+.input, .textarea{
+    display: block;
+    width: 100%;
+    border-radius: 16px;
+    padding: 10px;
+    border: 1px solid grey;
+    outline: none;
+}
+.myTextarea{
+    resize: none;
+    height: 100px;
+}
+.input:focus, .textarea:focus{
+    border: 1px solid #819D44;
+}
+.label{
+    color: grey;
+    margin: 20px 0 10px 0;
+}
+.formulaire{
+    padding: 30px;
+    background-color: #fff;
+    width: 450px;
+    position: absolute;
+    top: 120px;
+    right: 130px;
+}
+.country{
+    display: block;
+    border: none;
+    border-right: 1px solid grey;
+    background-color: transparent;
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    padding: 5px;
+    width: 110px;
+    outline: none;
+}
+.drap{
+    position: absolute;
+    bottom: 17px;
+    left: 15px;
+}
+.tel{
+    padding-left: 160px;
+    border-radius: 16px;
+    height: 50px;
+    width: 100%;
+    border: 1px solid grey;
+}
+.myButton{
+    padding: 15px 70px;
+    color: #fff;
+    border: none;
+    background-color: #819D44;
+    border-radius: 30px;
+    margin-top: 30px ;
+    margin-bottom: 30px;
+}
+@media (max-width: 1230px) {
+    .myContainer{
+        padding:0 30px 130px 50px;
+    }
+    .formulaire{
+        right: 2%;
+        width: 45%;
+    }
+}
+@media (max-width: 768px) {
+    .myContainer{
+        padding: 0;
+        width:70% ;
+        margin: auto;
+    }
+    .formulaire{
+        position: relative;
+        width: 70%;
+        margin:70px auto 0;
+        top: 0;
+    }
+    .bgMain{
+        padding-bottom: 50px;
+    }
+    .imageFooter{
+        display: block;
+        margin-top: 550px;
+    }
+}
+@media (max-width: 576px) {
+    .myContainer{
+        width:90% ;
+    }
+    .formulaire{
+        width: 90%;
+    }
+    .imageFooter{
+        display: block;
+        margin-top: 700px;
+    }
+}

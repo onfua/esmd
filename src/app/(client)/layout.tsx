@@ -1,4 +1,5 @@
 import layoutStyle from './layout.module.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import searchIcon from "../../assets/images/icons/search.svg"
