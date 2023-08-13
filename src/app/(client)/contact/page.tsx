@@ -10,7 +10,7 @@ const Contactez =()=>{
     const [drap, setDrap] = useState<any>(<Image src="/images/drap.png" alt="drap" className={styles.drap}/>)
 
     const drapeau = [
-        <Image src="/images/drap.png" alt="france" className={styles.drap} />
+        <Image src="/images/drap.png" alt="france" className={styles.drap} key='france'/>
     ]
 
     const handelCountryCodeChange =(e : any)=>{
