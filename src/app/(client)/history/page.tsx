@@ -4,6 +4,7 @@ import image1 from '@/assets/images/Rectangle 4397.png'
 import image2 from '@/assets/images/Rectangle 4399.png'
 import image3 from '@/assets/images/Rectangle 4401.png'
 import image4 from '@/assets/images/Rectangle 4402.png'
+import Title from '@/components/title/title'
 const Histoire =()=>{
     const article = [
         {
@@ -30,29 +31,11 @@ const Histoire =()=>{
             para : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci inventore expedita rerum ullam debitis. Animi consequatur veritatis culpa aperiam quasi reiciendis fugit porro cupiditate, fugiat dicta dignissimos vel id commodi.'
         }
     ]
-    const bg1 = '/images/Group 2.png'
-    const bg2 = '/images/Group 1.png'
 
     return(
         
         <div>
-            <header className={`${styles.header} ${styles.bgHead}`} >
-                <div className={styles.fond} 
-                    style={{
-                        backgroundImage: `url('${bg1}')`,
-                        backgroundPosition: 'left bottom',
-                    }}
-                >
-                    <div className={styles.fond}
-                        style={{
-                            backgroundImage: `url('${bg2}')`,
-                            backgroundPosition: 'right bottom',
-                        }}
-                    >
-                        <h2 className={styles.myTitle}>Notre histoire</h2>
-                    </div>
-                </div>
-            </header>
+            <Title title="Notre histoire"></Title>
             <section className={styles.section}>
                 <p className={styles.descri}>Nous croyons que les épices et les huilles essentielles ne sont pas seulement des ingrédients, mais une porte d&apos;entrée vers un monde de saveurs et de bien-être.</p>
             </section>

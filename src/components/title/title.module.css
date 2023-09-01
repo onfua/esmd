@@ -1,0 +1,21 @@
+.header{
+    height: 180px;
+    padding: 0;
+}
+.fond{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-repeat: no-repeat;
+}
+.bgHead{
+    background-color: #F9F3EC;
+}
+.myTitle{
+    font-size: 54px;
+    font-weight: bolder;
+    font-family: AvertaStd-Bold;
+    font-style: normal;
+    font-weight: 400;
+}

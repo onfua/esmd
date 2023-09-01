@@ -1,0 +1,140 @@
+.first{
+    width: 100%;
+    display: flex;
+    background: #fff;
+    flex-wrap: wrap;
+}
+.right{
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.right img{
+    object-fit: contain;
+    height: 100%;
+}
+
+.left > h1{
+    color: #000;
+    font-family: AvertaStd-Bold;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 54px; /* 135% */
+}
+
+.left > p{
+    display: flex;
+    flex-direction: column;
+    gap : 30px;
+    color: #211F1E;
+    font-size: 18px;
+    font-family: AvertaStd-Regular;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+.second{
+    width: 100%;
+    display: flex;
+    background: #F9F3EC;
+    flex-wrap: wrap;
+}
+
+.leftS{
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightS{
+    width:50%;
+    padding : 25px;
+}
+.leftS img{
+    object-fit: contain;
+    height: 100%;
+}
+
+.rightS > h1{
+    color: #000;
+    font-size: 42px;
+    font-family: AvertaStd-Bold;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 71.5px;
+}
+
+.rightS > p{
+    display: flex;
+    flex-direction: column;
+    gap : 30px;
+    color: #211F1E;
+    font-size: 18px;
+    font-family: AvertaStd-Regular;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.link{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 16px;
+    font-family: AvertaStd-Semibold;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35.5px;
+    background: #819D44;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 318px;
+    border-radius: 35px;
+    margin-top: 60px;
+}
+
+
+@media screen and (max-width:840px) {
+    .left > h1{
+        font-size:22px;
+        line-height: 40px;
+    }
+    .left > p{
+        font-size: 12px;
+        gap : 10px;
+    }
+}
+
+@media screen and (max-width:935px){
+    .left{
+        width: calc(1440px / 2);
+    }
+    .rightS{
+        width: calc(1440px / 2);
+    }
+    .leftS{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+    .right img{
+        width: 100%;
+    }
+    .leftS img{
+        width: 100%;
+    }
+}
