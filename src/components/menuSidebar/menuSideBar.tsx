@@ -9,20 +9,20 @@ import burgerIcon from "../../assets/images/icons/burger.png"
 import searchIcon from "../../assets/images/icons/search.svg"
 import userIcon from "../../assets/images/icons/add-user.svg"
 
-const LeftLink : React.FC = () => {
+const LeftLink = (props : any) => {
     return (
         <>
-            <Link href="/" className={layoutStyle.navlink}>Accueil</Link>
-            <Link href="/about" className={layoutStyle.navlink}>A propos</Link>
-            <Link href="/products" className={layoutStyle.navlink}>Nos produits</Link>
+            <Link href="/" className={layoutStyle.navlink} onClick={()=>props.hide()}>Accueil</Link>
+            <Link href="/about" className={layoutStyle.navlink} onClick={()=>props.hide()}>A propos</Link>
+            <Link href="/products" className={layoutStyle.navlink} onClick={()=>props.hide()}>Nos produits</Link>
         </>
     )
 } 
 
-const RightLink : React.FC = () => {
+const RightLink = (props : any) => {
     return (<>
-        <Link href="/contact" className={layoutStyle.navlink}>Contact</Link>
-        <Link href="/search" className={layoutStyle.navlink}><Image src={searchIcon} alt="search icon"></Image></Link>
+        <Link href="/contact" className={layoutStyle.navlink} onClick={()=>props.hide()}>Contact</Link>
+        <Link href="/search" className={layoutStyle.navlink} onClick={()=>props.hide()}><Image src={searchIcon} alt="search icon"></Image></Link>
 
     </>)
 }
@@ -42,8 +42,8 @@ export default function SideBarClient(){
             <button className={layoutStyle.burgerButton} onClick={()=>setMenuVisible(true)}><Image src={burgerIcon} alt="burger icon"></Image></button>
             <Sidebar visible={menuVisible} fullScreen onHide={()=>setMenuVisible(false)}>
                 <div className={layoutStyle.sidebar}>
-                   <LeftLink/>
-                   <RightLink/>
+                   <LeftLink hide={()=>setMenuVisible(false)}/>
+                   <RightLink hide={()=>setMenuVisible(false)}/>
                 </div>
                 
             </Sidebar>
