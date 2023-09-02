@@ -45,13 +45,13 @@ const Contactez =()=>{
                 <h1 className={styles.h1Title}>Contactez-nous</h1>
                 <p className={styles.myPara}>Nous serions ravis de vous entendre! Que vous ayez des questions sur nos produits, besoins de conseils pour choisir la bonne épices ou huiles essentielles, notre équipe est là pour vous</p>
                 <ul className={styles.myList}>
-                    <li><Image src={sms} alt='email'/> contact@esmdexport.com</li>
-                    <li><Image src={call} alt='call'/> +261 33 12 567 89</li>
-                    <li><Image src={location} alt='location'/> 5 rue Pleyel, Antananarivo, Madagascar</li>
+                    <li><Image src={sms} alt='email'/><span className={styles.cont}> contact@esmdexport.com</span></li>
+                    <li><Image src={call} alt='call'/><span className={styles.cont}> +261 33 12 567 89</span></li>
+                    <li><Image src={location} alt='location'/><span className={styles.cont}> 5 rue Pleyel, Antananarivo, Madagascar</span></li>
                 </ul>
            </div>
             <div className={`${styles.formulaire}`}>
-                <h2>Envoyer un message</h2>
+                <h2 className={styles.sendM}>Envoyer un message</h2>
                 <form onSubmit={(e)=> e.preventDefault()}>
                    <div className="row">
                         <div className={`${styles.nom} col-lg-6 col-md-12 col-sm-6 pe-lg-1`}>

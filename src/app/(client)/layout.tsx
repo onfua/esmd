@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import searchIcon from "../../assets/images/icons/search.svg"
-import userIcon from "../../assets/images/icons/add-user.svg"
 import SideBarClient from '../../components/menuSidebar/menuSideBar'
 
 const LeftLink : React.FC = () => {

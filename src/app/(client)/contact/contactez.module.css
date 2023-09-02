@@ -1,8 +1,10 @@
 .h1Title{
-    font-size: 35px;
+    color: #000;
+    font-family: AvertaStd-Bold;
+    font-size: 54px;
     font-style: normal;
-    font-weight: bold;
-    line-height: 50px;
+    font-weight: 400;
+    line-height: 71.5px; /* 132.407% */
 }
 .bgMain{
     background-color: #f9f3ec;
@@ -24,8 +26,12 @@
     padding:0 70px 130px 150px;
 }
 .myPara{
+    color: #000;
+    font-family: AvertaStd-Regular;
     font-size: 18px;
-    margin-bottom: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 144.444% */
 }
 .input, .textarea{
     display: block;
@@ -43,7 +49,12 @@
     border: 1px solid #819D44;
 }
 .label{
-    color: grey;
+    color: #7E828E;
+    font-family: AvertaStd-Regular;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px; /* 85.714% */
     margin: 20px 0 10px 0;
 }
 .formulaire{
@@ -80,12 +91,33 @@
 }
 .myButton{
     padding: 15px 70px;
-    color: #fff;
     border: none;
     background-color: #819D44;
     border-radius: 30px;
     margin-top: 30px ;
     margin-bottom: 30px;
+    color: #FFF;
+    font-family: Sofia Pro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.cont{
+    color: #161D1C;
+    font-family: AvertaStd-Regular;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.sendM{
+    color: #2D3134;
+    font-family: AvertaStd-Semibold;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 @media (max-width: 1230px) {
     .myContainer{

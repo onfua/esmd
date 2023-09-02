@@ -27,7 +27,7 @@ const Histoire =()=>{
         },{
             images : image4,
             date : '2023',
-            titre : 'Developpement à l\'intenternational',
+            titre : 'Developpement à l\'international',
             para : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci inventore expedita rerum ullam debitis. Animi consequatur veritatis culpa aperiam quasi reiciendis fugit porro cupiditate, fugiat dicta dignissimos vel id commodi.'
         }
     ]

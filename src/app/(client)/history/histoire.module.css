@@ -18,8 +18,13 @@
     padding-top: 70px;
 }
 .descri{
-    font-size: 20px;
-    font-weight: 500;
+    color: #211F1E;
+    text-align: center;
+    font-family: AvertaStd-Regular;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35.5px; /* 147.917% */
 }
 
 .image{
@@ -65,15 +70,28 @@
     padding:0 70px 130px 150px;
 }
 .myTitle{
+    color: #000;
+    font-family: AvertaStd-Bold;
     font-size: 54px;
-    font-weight: bolder;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 71.5px; /* 132.407% */
 }
 .sousTitre{
+    color: #000;
+    font-family: AvertaStd-Regular;
     font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 71.5px; /* 223.438% */
 }
 .myPara{
+    color: #211F1E;
+    font-family: AvertaStd-Regular;
     font-size: 18px;
-    margin: 25px 0;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 177.778% */
 }
 @media (max-width: 1200px) {
     .section{

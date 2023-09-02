@@ -19,6 +19,17 @@
     align-items: center;
     padding: 50px;
 }
+.left p{
+    margin-top: 30px;
+}
+.left h3{
+    color: #211F1E;
+    font-family: AvertaStd-Semibold;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 125% */
+}
 .right img{
     object-fit: contain;
     height: 100%;
