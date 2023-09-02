@@ -64,8 +64,8 @@ const DefaultLayout = ({children} : {children : React.ReactNode}) => {
                     </div>
                     <div className={layoutStyle.footerNav}>
                         <h1>contact</h1>
-                        <p>+261 33 09 631 68</p>
-                        <p>esmd.exportmg@gmail.com</p>
+                        <p className={layoutStyle.footerLink}>+261 33 09 631 68</p>
+                        <p className={layoutStyle.footerLink}>esmd.exportmg@gmail.com</p>
                     </div>
                 </div>
                 <hr />
