@@ -41,11 +41,11 @@ const About = () => {
             <ProductPost></ProductPost>
             <div className={styles.first}>
                 <div className={styles.left}>
-                    <h1>Nous croyons en l'importance de redonner à la communauté</h1>
+                    <h1>Nous croyons en l&apos;importance de redonner à la communauté</h1>
                     <p>
                         <span><h3>Approvisionnement durable</h3>Nous cherchons activement à établir des partenariats avec des agriculteurs pratiquant une agriculture durable.</span> 
                         <span><h3>Initiatives de commerce équitable</h3>Nous nous engageons en faveur des principes du commerce équitable.</span>
-                        <span><h3>Événements et salons professionnels</h3>Nous participons activement à des événements de l'industrie et à des salons professionnels pour nous connecter avec des individus partageant les mêmes valeurs.</span>
+                        <span><h3>Événements et salons professionnels</h3>Nous participons activement à des événements de l&apos;industrie et à des salons professionnels pour nous connecter avec des individus partageant les mêmes valeurs.</span>
                     </p>
                 </div>
                 <div className={styles.right}>
