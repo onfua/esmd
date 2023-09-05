@@ -65,7 +65,7 @@ const Blog = () => {
                 <div className={style.desc}>
                     <h2>Comment utiliser les huiles essentielles en aromathérapie?</h2>
                     <p>Découvrez notre poivre de qualité supérieure, une épice essentielle pour ajouter une saveur intense et subtile à tous vos plats.</p>
-                    <button>Lire l'article</button>
+                    <button>Lire l&apos;article</button>
                 </div>
             </div>
             <div className={style.blogs}>
