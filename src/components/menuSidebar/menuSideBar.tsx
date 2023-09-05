@@ -7,7 +7,6 @@ import { useState, useEffect } from "react"
 import layoutStyle from './style.module.css'
 import burgerIcon from "../../assets/images/icons/burger.png"
 import searchIcon from "../../assets/images/icons/search.svg"
-import userIcon from "../../assets/images/icons/add-user.svg"
 
 const LeftLink = (props : any) => {
     return (
