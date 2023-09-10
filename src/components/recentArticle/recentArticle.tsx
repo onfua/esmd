@@ -8,7 +8,7 @@ export default function RecentArticle(){
         <div className={style.main}>
             <h1>Articles récents</h1>
             <Products></Products>
-            <Link href='/suggested' className={style.link}>Voir tous les articles</Link>
+            <Link href='/blog' className={style.link}>Voir tous les articles</Link>
         </div>
     )
 }

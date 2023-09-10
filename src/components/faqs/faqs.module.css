@@ -1,0 +1,54 @@
+.faqs{
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq{
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 50px;
+    border-bottom:1px solid #C7C7C7;
+    margin-bottom: 41px;
+}
+.content h2{
+    color: #171410;
+    font-family: AvertaStd-Bold;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.content p{
+    display: none;
+    color: #4E4B4B;
+    font-family: AvertaStd-Regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    transition: .5s ease all;
+}
+.faq button{
+    width: 47px;
+    aspect-ratio: 1;
+    border-radius: 30px;
+    background: #F1F1F1;
+    transform-origin: center;
+    transform: rotateZ(-180deg);
+    transition: .2s ease all;
+}
+.faq button path{
+    stroke : black;
+}
+
+.open button{
+    transform: rotateZ(0);
+    background: #819D44;
+}
+.open button path{
+    stroke: white;
+}
+
+.open .content p{
+    display: block;
+}

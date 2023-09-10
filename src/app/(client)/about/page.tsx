@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Chiffre from '@/components/chiffreESMD/chiffre'
 import Link from 'next/link'
 import ProductPost from '@/components/product-post/productPost'
+import im from '@/assets/images/rectangle-1286.png'
 
 const About = () => {
     return (
@@ -49,7 +50,7 @@ const About = () => {
                     </p>
                 </div>
                 <div className={styles.right}>
-                    <Image src={picture} alt='Passionnés par la découverte des merveilles aromatiques'></Image>
+                    <Image src={im} alt='Passionnés par la découverte des merveilles aromatiques'></Image>
                 </div>
             </div>
         </>

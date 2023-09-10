@@ -1,0 +1,37 @@
+.all{
+    width: 100%;
+    display: flex;
+    margin-top : 47px;
+    justify-content: space-around;
+    padding: 25px;
+    flex-wrap: wrap;
+    gap : 30px;
+}
+
+.cat{
+    display: flex;
+    flex-direction: column;
+    gap : 20px;
+}
+.cat button{
+    border-radius: 40px;
+    background: transparent;
+    display: inline-flex;
+    height: 54px;
+    padding: 10px 35px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: #171410;
+    font-family: AvertaStd-Semibold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: .2s ease all;
+}
+.cat .activeCat{
+    background: #F8F8F8;
+    border : 0;
+}
