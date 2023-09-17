@@ -2,9 +2,10 @@
 
 import style from './faq.module.css'
 import Title from '@/components/title/title';
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
 import Faqs from '@/components/faqs/faqs';
 import RecentArticle from '@/components/recentArticle/recentArticle';
+import api from '@/utils/axiosConnect';
 
 type categorie = {
     id : number | string,
@@ -12,20 +13,31 @@ type categorie = {
 }
 
 const Faq = () => {
-    const [categories,setCategories] = useState<categorie[]>([
-        {
-            id:1,
-            name: 'Général'
-        },
-        {
-            id:2,
-            name: 'Paiement et livraison'
-        }
-    ])
-    const [active,setActive] = useState<number | string>(1)
+    const [categories,setCategories] = useState<categorie[]>([])
+    const [active,setActive] = useState<string>("")
     const isActive = (e : number | string) : string => {
         return e==active?style.activeCat:''
     }
+
+    useEffect(()=>{
+        const action =async () => {
+            const res = await api.get(`api/type-de-faqs`)
+            if (res.data.data.length>0){
+                setCategories(res.data.data.map((e:any)=>{
+                    return {
+                        id : e.id,
+                        name : e.attributes.Type
+                    }
+                }))
+            }
+        }
+        action()
+    },[])
+
+    useEffect(()=>{
+        if (categories.length>0) setActive(categories[0].name)
+        
+    },[categories])
 
     return (
         <>
@@ -34,7 +46,7 @@ const Faq = () => {
                 <div className={style.cat}>
                     {categories.map((e : categorie)=>{
                         return (
-                            <button className={isActive(e.id)} onClick={()=>{setActive(e.id)}} key={e.id}>{e.name}</button>
+                            <button className={isActive(e.name)} onClick={()=>{setActive(e.name)}} key={e.id}>{e.name}</button>
                         )
                     })}
                 </div>

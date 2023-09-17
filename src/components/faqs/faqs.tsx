@@ -1,6 +1,7 @@
 'use client'
 import style from './faqs.module.css'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
+import api from '@/utils/axiosConnect'
 
 type faq = {
     id : number | string,
@@ -10,24 +11,34 @@ type faq = {
 }
 
 const Faqs = (props : {categorie : number | string}) => {
-    const [faqs,setFaqs] = useState<faq[]>([
-        {
-            id : 1,
-            title : `Quelle est la politique de livraison et combien de temps faut-il pour recevoir ma commande ?`,
-            description : `La politique de livraison varie en fonction de votre emplacement et des options de livraison que vous choisissez lors de votre commande. Généralement, nous nous efforçons de traiter et d'expédier les commandes dans un délai de 1 à 3 jours ouvrables.
-            Le délai de livraison dépendra également du service de transporteur utilisé. En règle générale, les livraisons nationales prennent entre 2 et 7 jours ouvrables, tandis que les livraisons internationales peuvent prendre de 7 à 14 jours ouvrables, en fonction de la destination.`,
-            open : false
-        },
-        {
-            id : 2,
-            title : `Quelle est la politique de livraison et combien de temps faut-il pour recevoir ma commande ?`,
-            description : `La politique de livraison varie en fonction de votre emplacement et des options de livraison que vous choisissez lors de votre commande. Généralement, nous nous efforçons de traiter et d'expédier les commandes dans un délai de 1 à 3 jours ouvrables.
-            Le délai de livraison dépendra également du service de transporteur utilisé. En règle générale, les livraisons nationales prennent entre 2 et 7 jours ouvrables, tandis que les livraisons internationales peuvent prendre de 7 à 14 jours ouvrables, en fonction de la destination.`,
-            open : false
-        }
-    ])
+    const [faqs,setFaqs] = useState<faq[]>([])
 
-    return (
+    useEffect(()=>{
+        const action =async () => {
+            if (props.categorie!==""){
+                const res = await api.get(`api/faqs?populate[0]=type_de_faq`)
+            console.log(res)
+            if (res.data.data.length>0){
+                setFaqs(res.data.data.map((e : any)=>{
+                    if (props.categorie===e.attributes.type_de_faq.data.attributes.Type){
+                        return {
+                            id : e.id,
+                            title : e.attributes.Titre,
+                            description : e.attributes.Description,
+                            open:false
+                        }
+                    }
+                }))
+            }else{
+                setFaqs([])
+            }
+            }
+            
+        }
+        action()
+    },[props.categorie])
+
+    return faqs.length>0?(
         <div className={style.faqs}>
             {
                 faqs.map((e : faq, ind : number) => {
@@ -66,7 +77,7 @@ const Faqs = (props : {categorie : number | string}) => {
                 })
             }
         </div>
-    )
+    ):<></>
 }
 
 export default Faqs
