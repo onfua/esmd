@@ -1,16 +1,17 @@
 'use client'
 
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { StaticImageData } from 'next/image';
 import im from '@/assets/images/poivre.png'
 import style from './p.module.css'
 import Image from "next/image";
 import picture from '@/assets/images/secondPoster/rectangle-1280.png'
+import api,{host} from "@/utils/axiosConnect";
 type Data = {
     image : string | StaticImageData,
     name : string,
     description : string,
-    variantes : string[] | null,
+    variantes : string[],
     sous_titre : string,
     para : string,
     type : string,
@@ -20,20 +21,31 @@ type Data = {
 export default function Page({ params }: { params: { id: string } }) {
     const [data,setData] = useState<Data>({
         id: params.id,
-        type : "Epice",
+        type : "",
         image: im,
-        name : "Poivre",
-        description : `Ce poivre est récolté à la main à son stade de maturité optimal, ce qui garantit une fraîcheur et une intensité aromatique incomparables. Chaque grain de poivre est ensuite séché et conditionné avec le plus grand soin, préservant ainsi tous ses arômes naturels et ses propriétés gustatives uniques.`,
-        variantes : [
-            "Vert en saumure",
-            "Noir FAQ",
-            "Noir Grade 1",
-            "Moulu (250-350 microns)"
-        ],
-        sous_titre:"Une intensité aromatique incomparables",
-        para : `Avec son profil de saveur complexe, notre poivre apporte une chaleur délicate et une légère note piquante à vos plats. 
-        Il est polyvalent et s'adapte à une grande variété de recettes, qu'il s'agisse de viandes, de légumes, de sauces ou de marinades.`
+        name : "",
+        description : ``,
+        variantes : [],
+        sous_titre:"",
+        para : ``
     })
+
+    useEffect(()=>{
+        const action = async () => {
+            const res = await api.get(`api/produits/${params.id}?populate=*`)
+            setData({
+                id : res.data.data.id,
+                type : res.data.data.attributes.type_de_produit.data.attributes.Categorie,
+                image : host+res.data.data.attributes.Image.data.attributes.url,
+                name : res.data.data.attributes.Nom,
+                description : res.data.data.attributes.Description,
+                variantes : res.data.data.attributes.Variante.map((e : any):string=>e.Nom),
+                sous_titre : res.data.data.attributes.sous_titre,
+                para : res.data.data.attributes.sous_description
+            })
+        }
+        action()
+    },[])
     return (
         <>
             <div className={style.header}>
@@ -47,7 +59,7 @@ export default function Page({ params }: { params: { id: string } }) {
                     <h1>{data.name}</h1>
                     <p>{data.description}</p>
                     {
-                        data.variantes?(
+                        data.variantes.length>0?(
                             <>
                                 <h3 className={style.var}>Les variantes</h3>
                                 <ul>

@@ -18,7 +18,7 @@ const LeftLink : React.FC = () => {
 const RightLink : React.FC = () => {
     return (<>
         <Link href="/contact" className={layoutStyle.navlink}>Contact</Link>
-        <Link href="/search" className={layoutStyle.navlink}><Image src={searchIcon} alt="search icon"></Image></Link>
+        {null?<Link href="/search" className={layoutStyle.navlink}><Image src={searchIcon} alt="search icon"></Image></Link>:<></>}
         
     </>)
 }
@@ -26,7 +26,7 @@ const RightLink : React.FC = () => {
 const DefaultLayout = ({children} : {children : React.ReactNode}) => {
     return (
         <>
-            <nav className={layoutStyle.nav}>
+            <nav className={layoutStyle.nav} >
                 <div className={layoutStyle.navButton}>
                     <LeftLink/>
                 </div>
@@ -56,12 +56,15 @@ const DefaultLayout = ({children} : {children : React.ReactNode}) => {
                         <Link href={'/blog'} className={layoutStyle.footerLink}>Blog</Link>
                         <Link href={'/faq'} className={layoutStyle.footerLink}>Foire aux questions</Link>
                     </div>
-                    <div className={layoutStyle.footerNav}>
+                    {
+                        null?<div className={layoutStyle.footerNav}>
                         <h1>shop</h1>
                         <Link href={'/products/spices'} className={layoutStyle.footerLink}>Epices</Link>
                         <Link href={'/products/oil'} className={layoutStyle.footerLink}>Huiles essentielles</Link>
                         <Link href={'/products/floralwaters'} className={layoutStyle.footerLink}>Eaux florales</Link>
-                    </div>
+                    </div>:<></>
+                    }
+                    
                     <div className={layoutStyle.footerNav}>
                         <h1>contact</h1>
                         <p className={layoutStyle.footerLink}>+261 33 09 631 68</p>

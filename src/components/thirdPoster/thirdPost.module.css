@@ -2,16 +2,18 @@
     width: 100%;
     display: flex;
     background: #F9F3EC;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .right{
-    width: 50%;
+    
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .left{
-    width:50%;
+    max-width: 725px;
     padding : 25px;
     display: flex;
     flex-direction: column;
@@ -20,7 +22,7 @@
 }
 .right img{
     object-fit: contain;
-    height: 100%;
+    width: 100%;
 }
 
 .left > h1{

@@ -2,14 +2,13 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import image from '@/assets/images/product-post/pngegg-51.png'
+import {useRouter} from 'next/navigation'
 import style from './product.module.css'
 import { StaticImageData } from 'next/image'
-
-type product = 'epice' | 'huile'
+import api,{host} from '@/utils/axiosConnect'
 
 type propsProduct = {
-    type : product
+    type : string
 }
 
 type prod = {
@@ -21,14 +20,24 @@ type prod = {
 type products = prod[]
 
 export default function Product(props : propsProduct){
-
+    const route = useRouter()
     const [products,setProducts] = useState<products>([])
 
     useEffect(() => {
         const getProduct = async () => {
-            //static file
-            const data : products = [{image,name:'Baies roses',id:1},{image,name:'Baies roses',id:2},{image,name:'Baies roses',id:3},{image,name:'Baies roses',id:4}]
-            setProducts(data)
+            try{
+                const res = await api.get(`api/produits?filters[type_de_produit][Categorie][$eq]=${props.type}&populate=*&pagination[page]=1&pagination[pageSize]=4`)
+                setProducts(res.data.data.map((e : any)=>{
+                    return {
+                        id : e.id,
+                        name : e.attributes.Nom,
+                        image : host+e.attributes.Image.data.attributes.url
+                    }
+                }))
+            }catch(err){
+                console.error(err)
+            }
+
         }
         getProduct()
     },[props.type])
@@ -36,9 +45,9 @@ export default function Product(props : propsProduct){
     const displayProducts = () => {
         return products.map(({image , name, id} : prod) => {
             return (
-                <div className={style.product} key={id}>
+                <div className={style.product} key={id} onClick={()=>route.push(`/products/${id}`)}>
                     <div className={style.imageContainer}>
-                        <Image className={style.image} src={image} alt={name}></Image>
+                        <Image className={style.image} src={image} alt={name} width={147} height={147}></Image>
                     </div>
                     <h3>{name}</h3>
                 </div>

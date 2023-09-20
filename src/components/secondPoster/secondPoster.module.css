@@ -2,17 +2,20 @@
     width: 100%;
     display: flex;
     background: #F9F3EC;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .left{
-    width: 50%;
+    
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .right{
-    width:50%;
     padding : 25px;
+    max-width: 720px;
+    
 }
 .left img{
     object-fit: contain;

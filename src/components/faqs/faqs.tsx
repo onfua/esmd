@@ -17,7 +17,6 @@ const Faqs = (props : {categorie : number | string}) => {
         const action =async () => {
             if (props.categorie!==""){
                 const res = await api.get(`api/faqs?populate[0]=type_de_faq`)
-            console.log(res)
             if (res.data.data.length>0){
                 setFaqs(res.data.data.map((e : any)=>{
                     if (props.categorie===e.attributes.type_de_faq.data.attributes.Type){
@@ -70,7 +69,7 @@ const Faqs = (props : {categorie : number | string}) => {
                             <button onClick={()=>{
                                clickAction(e.id)
                             }}><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-  <path d="M3.5 10.5L8.5 5.5L13.5 10.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.5 10.5L8.5 5.5L13.5 10.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg></button>
                         </div>
                     )

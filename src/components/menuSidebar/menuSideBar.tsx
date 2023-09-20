@@ -21,7 +21,7 @@ const LeftLink = (props : any) => {
 const RightLink = (props : any) => {
     return (<>
         <Link href="/contact" className={layoutStyle.navlink} onClick={()=>props.hide()}>Contact</Link>
-        <Link href="/search" className={layoutStyle.navlink} onClick={()=>props.hide()}><Image src={searchIcon} alt="search icon"></Image></Link>
+        {null?<Link href="/search" className={layoutStyle.navlink} onClick={()=>props.hide()}><Image src={searchIcon} alt="search icon"></Image></Link>:<></>}
 
     </>)
 }

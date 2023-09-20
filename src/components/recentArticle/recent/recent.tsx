@@ -25,7 +25,6 @@ export default function Products(){
         const action = async () => {
             try{
                 const res = await api.get(`api/blogs?populate[0]=Image&pagination[page]=1&pagination[pageSize]=3`)
-                console.log(res)
                 if (res.data.data){
                     setProducts(res.data.data.map((e : any)=>{
                         return {

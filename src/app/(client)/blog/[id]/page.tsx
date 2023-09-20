@@ -85,8 +85,8 @@ const convertContenu = (contenu : string) : string => {
                 <div className={style.content} dangerouslySetInnerHTML={{ __html: convertContenu(data.contenu) }}></div>
                 <div className={style.images}>
                     {
-                        data.images.length>0?data.images.map((e : any)=>{
-                            return <Image src={e} alt='galerie' width={341} height={251}/>
+                        data.images.length>0?data.images.map((e : any, index : number)=>{
+                            return <Image src={e} alt='galerie' width={341} height={251} key={index}/>
                         }):<></>
                     }
                 </div>
